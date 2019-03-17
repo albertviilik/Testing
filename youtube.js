@@ -43,3 +43,5 @@ async function quickstart(
 
 	console.log(`gs://${bucketName}/${filename} is now public.`);
 }
+
+quickstart();
