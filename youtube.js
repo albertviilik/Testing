@@ -17,7 +17,7 @@ async function quickstart(
 	/**
 	 * TODO(developer): Uncomment the following lines before running the sample.
 	 */
-	const bucketName = 'playbackfiles';
+	// const bucketName = 'playbackfiles';
 
 	//youtube downloader
 	const ytdl = require('ytdl-core');
