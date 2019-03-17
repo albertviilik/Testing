@@ -20,6 +20,7 @@ youtube.searchVideos('sandu ciorba', 4)
     }).catch(console.log);
 
 async function quickstart(
+	filename = 'filename',
   projectId = 'hacktheburgh2019', // Your Google Cloud Platform project ID
   bucketName = 'hacktheburghfiles' // The name for the new bucket
 ) {
@@ -45,4 +46,4 @@ async function quickstart(
   console.log(`${filename} uploaded to ${bucketName}.`);
 }
 
-quickstart();
+quickstart(results[1].id + '.mp3');
