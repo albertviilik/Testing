@@ -35,9 +35,10 @@ async function quickstart(
   // console.log(`Bucket ${bucketName} created.`);
   await storage.bucket(bucketName).upload('A3g-lPWvXDI.mp3', {
   // Support for HTTP requests made with `Accept-Encoding: gzip`
-  gzip: true,
+  gzip: false,
   metadata: {
     // Enable long-lived HTTP caching headers
+    contentType: 'public',
     // Use only if the contents of the file will never change
     // (If the contents will change, use cacheControl: 'no-cache')
     cacheControl: 'public, max-age=31536000',
