@@ -5,6 +5,16 @@ const apiKey = require('./youtube.key.js');
 const YouTube = require('simple-youtube-api');
 const youtube = new YouTube(apiKey.key);
 
+const {Storage} = require('@google-cloud/storage');
+
+// Creates a client
+const storage = new Storage();
+
+/**
+ * TODO(developer): Uncomment the following lines before running the sample.
+ */
+const bucketName = 'playbackfiles';
+
 //youtube downloader
 const ytdl = require('ytdl-core');
 
@@ -18,3 +28,13 @@ youtube.searchVideos('sandu ciorba', 4)
             .pipe(fs.createWriteStream(results[1].id + '.mp3'));
 
     }).catch(console.log);
+
+ const filename = results[1].id + '.mp3';
+
+ // Makes the file public
+await storage
+  .bucket(bucketName)
+  .file(filename)
+  .makePublic();
+
+console.log(`gs://${bucketName}/${filename} is now public.`);
