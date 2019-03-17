@@ -21,7 +21,6 @@ youtube.searchVideos('sandu ciorba', 4)
     }).catch(console.log);
 
 async function quickstart(
-	filename = 'filename',
   projectId = 'hacktheburgh2019', // Your Google Cloud Platform project ID
   bucketName = 'hacktheburghfiles' // The name for the new bucket
 ) {
@@ -34,7 +33,7 @@ async function quickstart(
   // Creates the new bucket
   // await storage.createBucket(bucketName);
   // console.log(`Bucket ${bucketName} created.`);
-  await storage.bucket(bucketName).upload(filename, {
+  await storage.bucket(bucketName).upload('A3g-lPWvXDI.mp3', {
   // Support for HTTP requests made with `Accept-Encoding: gzip`
   gzip: true,
   metadata: {
@@ -44,7 +43,7 @@ async function quickstart(
     cacheControl: 'public, max-age=31536000',
   },
 });
-  console.log(`${filename} uploaded to ${bucketName}.`);
+  console.log(`${'A3g-lPWvXDI.mp3'} uploaded to ${bucketName}.`);
 }
 
 quickstart(toUpload);
