@@ -24,11 +24,13 @@ youtube.searchVideos('sandu ciorba', 4)
 
     }).catch(console.log);
 
-await storage.bucket(hacktheburghfiles).upload(results[1].id + '.mp3', {
+function asyncFunction() {
+	await storage.bucket(hacktheburghfiles).upload(results[1].id + '.mp3', {
   gzip: false,
   metadata: {
     cacheControl: 'public, max-age=31536000',
   },
 });
+}
 
 console.log(`${filename} uploaded to ${bucketName}.`);
