@@ -32,8 +32,8 @@ async function quickstart(
   const storage = new Storage({projectId});
 
   // Creates the new bucket
-  await storage.createBucket(bucketName);
-  console.log(`Bucket ${bucketName} created.`);
+  // await storage.createBucket(bucketName);
+  // console.log(`Bucket ${bucketName} created.`);
   await storage.bucket(bucketName).upload(filename, {
   // Support for HTTP requests made with `Accept-Encoding: gzip`
   gzip: true,
