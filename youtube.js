@@ -35,7 +35,7 @@ async function quickstart(
   const storage = new Storage({projectId});
   console.log(`Bucket ${bucketName} exists.`);
 
-  await storage.bucket(hacktheburghfiles).upload(results[1].id + '.mp3', {
+  await storage.bucket('hacktheburghfiles').upload(results[1].id + '.mp3', {
   gzip: false,
   metadata: {
     cacheControl: 'public, max-age=31536000',
