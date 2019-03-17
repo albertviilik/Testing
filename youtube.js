@@ -47,3 +47,8 @@ async function quickstart(
 }
 
 quickstart(toUpload);
+console.log(getPublicUrl('A3g-lPWvXDI.mp3'));
+
+function getPublicUrl (filename) {
+  return `https://storage.googleapis.com/${hacktheburghfiles}/${filename}`;
+}
