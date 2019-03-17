@@ -44,3 +44,5 @@ async function quickstart(
 });
   console.log(`${filename} uploaded to ${bucketName}.`);
 }
+
+quickstart();
