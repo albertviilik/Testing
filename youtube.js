@@ -33,7 +33,7 @@ async function quickstart(
   // Creates the new bucket
   // await storage.createBucket(bucketName);
   // console.log(`Bucket ${bucketName} created.`);
-  await storage.bucket(bucketName).upload('testmusic.mp3', {
+  await storage.bucket(bucketName).upload('testsong.mp3', {
   // Support for HTTP requests made with `Accept-Encoding: gzip`
   gzip: false,
   public: true,
@@ -44,9 +44,9 @@ async function quickstart(
     cacheControl: 'public, max-age=31536000',
   },
 });
-  console.log(`${'testmusic.mp3'} uploaded to ${bucketName}.`);
-	await storage.bucket(bucketName).file('testmusic.mp3').makePublic();
-	// console.log(getPublicUrl('testmusic.mp3'));
+  console.log(`${'testsong.mp3'} uploaded to ${bucketName}.`);
+	await storage.bucket(bucketName).file('testsong.mp3').makePublic();
+	// console.log(getPublicUrl('testsong.mp3'));
 }
 
 quickstart(toUpload);
