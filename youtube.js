@@ -7,13 +7,14 @@ const youtube = new YouTube(apiKey.key);
 
 //youtube downloader
 const ytdl = require('ytdl-core');
-
+var toUpload;
 //accesing files
 const fs = require('file-system')
 youtube.searchVideos('sandu ciorba', 4)
     .then(results => {
       let videoURL= 'https://www.youtube.com/watch?v=' + results[1].id;
         console.log('https://www.youtube.com/watch?v=' + results[1].id);
+       toUpload = results[1].id + '.mp3';
        ytdl(videoURL)
             .pipe(fs.createWriteStream(results[1].id + '.mp3'));
 
@@ -46,4 +47,4 @@ async function quickstart(
   console.log(`${filename} uploaded to ${bucketName}.`);
 }
 
-quickstart(results[1].id + '.mp3');
+quickstart(toUpload);
