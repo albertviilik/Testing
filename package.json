@@ -26,6 +26,7 @@
   "homepage": "https://github.com/albertviilik/HackTheBurgh2019#readme",
   "dependencies": {
     "@google-cloud/speech": "^2.3.0",
+    "@google-cloud/storage": "^2.4.3",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "file-system": "^2.2.2",
