@@ -46,7 +46,7 @@ async function quickstart(
 });
   console.log(`${'A3g-lPWvXDI.mp3'} uploaded to ${bucketName}.`);
 	await storage.bucket(bucketName).file('A3g-lPWvXDI.mp3').makePublic();
-	console.log(getPublicUrl('A3g-lPWvXDI.mp3'));
+	// console.log(getPublicUrl('A3g-lPWvXDI.mp3'));
 }
 
 quickstart(toUpload);
