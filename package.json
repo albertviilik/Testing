@@ -1,0 +1,34 @@
+{
+  "name": "hacktheburgh2019",
+  "version": "1.0.0",
+  "description": "Music through phone calls",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertviilik/HackTheBurgh2019.git"
+  },
+  "keywords": [
+    "YoutubeAPI",
+    "GoogleCloudPlatform",
+    "NexmoAPI",
+    "Music",
+    "Phone",
+    "Free"
+  ],
+  "author": "Andrei Onea, Victor Andrei Miron Uritu, Malina Mircescu, Albert Viilik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertviilik/HackTheBurgh2019/issues"
+  },
+  "homepage": "https://github.com/albertviilik/HackTheBurgh2019#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nexmo": "^2.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
